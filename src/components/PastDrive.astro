@@ -1,0 +1,24 @@
+---
+import Map from "../assets/map.astro";
+import Drag from "../assets/drag.tsx";
+---
+
+<style>
+    p {
+        font-size: 16pt;
+    }
+    h2 {
+        font-size: 30pt;
+    }
+    </style>
+
+<div style="display: flex;gap: 10px;justify-content: space-between" id="pastdrive">
+    <div style="width: 40vw;">
+        <h2 style="margin: 0;">Past Drives</h2>
+        <p><i>However on pins to view more info about the drives</i></p>
+        <p>Scavenger Relife was launched in 2020. The project was launched with the goal of providing <b>1000 manual scavengers</b> across India. The project has currently completed <b>6 major drives</b> </p>
+
+    </div>
+
+        <Drag client:only="react" />
+</div>

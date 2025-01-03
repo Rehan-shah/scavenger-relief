@@ -1,0 +1,36 @@
+---
+
+import Button from '../assets/button.astro';
+---
+<style>
+
+    a{
+        all:unset;
+       font-family: 'Inter', sans-serif;
+
+        cursor: pointer;
+    }
+
+    a:hover{
+        text-decoration: underline;
+        text-decoration-color: #333333;
+    }
+    </style>
+<div style="background-color: #E4E5DC;z-index: 2;position: sticky;padding: 0px;margin: 0px;top:0px">
+
+        <div style="padding-top: 10px;padding-bottom: 10px; font-size: 18px;display: flex; align-content: center;justify-content:space-between;">
+
+
+    <div style="font-weight: 600;">Scavenger<br/> Relife</div>
+    <nav style="all:unset;align-items: center;display: flex ; gap:20pt">
+
+        <a href="#purpose">Purpose</a>
+        <a href="#pastdrive">Past Drives</a>
+        <a href="/blog">Recognition</a>
+        <a href="/contact"><div></div></a>
+        <a href="/contact"><Button isDonate={true} /></a>
+    </nav>
+</div>
+
+<hr style="height: 2px;width: 100vw; margin-left: -10vw;padding: 0px;"/>
+        </div>
