@@ -10,12 +10,15 @@ import PastDrive from '../components/PastDrive.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Navbar />
 <Layout>
+<Navbar />
+<div style="width: 80%;margin: auto;">
+
 <Hero />
 <Stats />
 <Purpose />
 <div style="margin-top: 8vw">
     <PastDrive  />
+</div>
 </div>
 </Layout>
