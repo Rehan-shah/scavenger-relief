@@ -1,3 +1,124 @@
 ---
-
+title: "Achievements Section"
+layout: "base"
 ---
+
+<style>
+  :root {
+    --primary-color: rgb(90, 90, 89);
+    --secondary-color: rgb(228, 228, 221);
+    --text-color: rgb(51, 51, 51);
+  }
+
+  .achievements {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .achievement-header {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  .achievement-grid {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .achievement-card {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .achievement-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+  }
+
+  .achievement-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .achievement-card button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .achievement-card button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+  }
+
+  .purpose {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+
+  .purpose h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+  }
+
+  .purpose p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+</style>
+
+<section class="achievements" id="rec">
+  <h2 class="achievement-header">Recognisation</h2>
+
+  <div class="achievement-grid">
+    <div class="achievement-card">
+      <h3>Newspaper</h3>
+      <p>Featured in a newspaper, named Sadhnas.</p>
+      <button>View the Paper</button>
+    </div>
+
+    <div class="achievement-card">
+      <h3>QS-IMPACT Scholarship</h3>
+      <p>Join us in our community outreach activities and awareness campaign events.</p>
+      <button>View IMPACT Page</button>
+    </div>
+
+    <div class="achievement-card">
+      <h3>United Nations Honorary Certificate</h3>
+      <p>Help us spread our advocacy to your friends, family, and colleagues.</p>
+      <button>View the Certificate</button>
+    </div>
+  </div>

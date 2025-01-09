@@ -1,0 +1,316 @@
+---
+const teamMembers = {
+  founders: [
+    { name: "Rehan Shah", role: "Co-Founder" },
+    { name: "Sajan Shah", role: "Founder" }
+  ],
+  volunteers: [
+    { name: "Aanya Malhotra", contribution: "Ground Operations Lead" },
+    { name: "Veer Kapoor", contribution: "Community Mobilizer" },
+    { name: "Ishaan Patel", contribution: "Field Coordinator" },
+    { name: "Arjun Singhania", contribution: "Logistics Head" },
+    { name: "Kyra Desai", contribution: "Program Implementation" },
+    { name: "Dev Ranawat", contribution: "Youth Programs" },
+    { name: "Mira Chadha", contribution: "Resource Management" },
+    { name: "Kabir Ahuja", contribution: "Field Operations" },
+    { name: "Tara Sharma", contribution: "Community Relations" },
+    { name: "Rohan Mehta", contribution: "Ground Support" }
+  ],
+  organizations: [
+    { name: "T.I.D.E Foundation", contribution: "Strategic Partner" },
+    { name: "Change The World Foundation", contribution: "Implementation Partner" },
+    { name: "QS Impact", contribution: "Resource Partner" },
+    { name: "Live to Inspire Foundation", contribution: "Community Partner" }
+  ],
+  donors: [
+    { name: "Raj & Priya Ambani", contribution: "Major Benefactor" },
+    { name: "Vikram Mehta", contribution: "Principal Donor" },
+    { name: "Nisha Patel", contribution: "Key Supporter" },
+    { name: "Rohan Desai", contribution: "Major Contributor" },
+    { name: "Amar Khanna", contribution: "Lead Benefactor" }
+  ]
+};
+---
+
+<section class="team-container">
+  <div class="founders-section">
+    <h2>Our Visionaries</h2>
+    <div class="founders-grid">
+      {teamMembers.founders.map(founder => (
+        <div class="founder-card animate-fade-in">
+          <h3>{founder.name}</h3>
+          <p>{founder.role}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="volunteers-section">
+    <h2>Ground Force</h2>
+    <div class="volunteers-grid">
+      {teamMembers.volunteers.map(volunteer => (
+        <div class="volunteer-card animate-slide-up">
+          <div class="card-glow"></div>
+          <h3>{volunteer.name}</h3>
+          <p>{volunteer.contribution}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="partners-section">
+    <h2>Partner Organizations</h2>
+    <div class="partners-grid">
+      {teamMembers.organizations.map(org => (
+        <div class="partner-card animate-fade-in">
+          <h3>{org.name}</h3>
+          <p>{org.contribution}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="donors-section">
+    <h2>Major Supporters</h2>
+    <div class="donors-scroll">
+      <div class="donors-container">
+        {teamMembers.donors.map(donor => (
+          <div class="donor-card animate-slide-right">
+            <h3>{donor.name}</h3>
+            <p>{donor.contribution}</p>
+            <div class="shine-effect"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: rgb(228, 228, 221);
+    padding: 4rem 2rem;
+    overflow-x: hidden;
+  }
+
+  h2 {
+    color: rgb(51, 51, 51);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: rgb(90, 90, 89);
+  }
+
+  .founders-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    max-width: 700px;
+    margin: 0 auto 5rem auto;
+  }
+
+  .founder-card {
+    background: linear-gradient(135deg, rgba(90, 90, 89, 0.1), rgba(51, 51, 51, 0.05));
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(90, 90, 89, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.1);
+  }
+
+  .volunteers-grid {
+    display: grid;
+   grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .volunteer-card {
+    background: rgb(228, 228, 221);
+    padding: 1.5rem;
+    border-radius: 15px;
+    position: relative;
+    border: 2px solid rgba(90, 90, 89, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .partner-card {
+    background: linear-gradient(45deg, rgba(51, 51, 51, 0.05), rgba(90, 90, 89, 0.1));
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .donors-scroll {
+    width: 100%;
+    overflow-x: auto;
+    padding: 2rem 0;
+  }
+
+  .donors-container {
+    display: flex;
+    gap: 2rem;
+    padding: 0 1rem;
+    min-width: min-content;
+  }
+
+  .donor-card {
+    background: rgb(228, 228, 221);
+    padding: 2rem;
+    border-radius: 15px;
+    min-width: 300px;
+    position: relative;
+    border: 1px solid rgba(90, 90, 89, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .donor-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .shine-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transform: skewX(-20deg);
+    animation: shine 3s infinite;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+  }
+
+  .animate-slide-right {
+    opacity: 0;
+    animation: slideRight 0.8s ease forwards;
+  }
+
+  /* Applying animation delays to cards */
+  .volunteer-card:nth-child(n) {
+    animation-delay: calc(0.1s * var(--index, 0));
+  }
+
+  .donor-card:nth-child(n) {
+    animation-delay: calc(0.2s * var(--index, 0));
+  }
+
+  /* Custom scrollbar for donors section */
+  .donors-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .donors-scroll::-webkit-scrollbar-track {
+    background: rgba(90, 90, 89, 0.1);
+    border-radius: 4px;
+  }
+
+  .donors-scroll::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 89, 0.3);
+    border-radius: 4px;
+  }
+
+  @media (max-width: 1200px) {
+    .volunteers-grid, .partners-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .volunteers-grid, .partners-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .founders-grid {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .volunteers-grid, .partners-grid {
+      grid-template-columns: 1fr;
+    }
+    .donor-card {
+      min-width: 250px;
+    }
+  }
+</style>
